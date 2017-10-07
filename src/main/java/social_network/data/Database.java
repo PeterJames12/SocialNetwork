@@ -1,9 +1,11 @@
 package social_network.data;
 
+import social_network.model.Post;
 import social_network.model.User;
 import social_network.util.Status;
 import social_network.util.University;
 
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -39,5 +41,31 @@ public class Database {
         users.add(anton);
 
         return users;
+    }
+
+    public static List<Post> getAllPosts() {
+
+        List<Post> posts = new LinkedList<>();
+
+        Post first = new Post();
+        first.setTitle("News");
+        first.setText("Good news!");
+        first.setPublishedTime(LocalDateTime.now());
+
+        Post second = new Post();
+        second.setTitle("Sport news");
+        second.setText("Win!");
+        second.setPublishedTime(LocalDateTime.now());
+
+        Post third = new Post();
+        third.setTitle("Whether");
+        third.setText("Rain");
+        third.setPublishedTime(LocalDateTime.now());
+
+        posts.add(first);
+        posts.add(second);
+        posts.add(third);
+
+        return posts;
     }
 }
