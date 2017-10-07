@@ -1,5 +1,6 @@
 package social_network.dao;
 
+import social_network.data.Database;
 import social_network.model.User;
 
 import java.util.List;
@@ -10,6 +11,6 @@ import java.util.List;
 public class UserDao {
 
     public List<User> getAll() {
-        return null;
+        return Database.getAllUsers();
     }
 }

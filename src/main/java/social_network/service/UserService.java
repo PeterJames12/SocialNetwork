@@ -14,4 +14,13 @@ public class UserService {
         UserDao userDao = new UserDao();
         return userDao.getAll();
     }
+
+    public void printUsers(List<User> users) {
+        for (User user : users) {
+            System.out.println(user.getName());
+            System.out.println(user.getAge());
+            System.out.println(user.getStatus());
+            System.out.println(user.getUniversity());
+        }
+    }
 }
