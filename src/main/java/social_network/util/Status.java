@@ -7,4 +7,5 @@ public class Status {
 
     public static final String SINGLE = "Single";
     public static final String MARRIED = "Married";
+    public static final String IN_RELATIONSHIP = "In relationship";
 }
