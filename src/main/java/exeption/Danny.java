@@ -70,9 +70,6 @@ public class Danny {
             System.out.println("Wrong Index");
         }
 
-
-
-
         String name = "Ana";
         try {
             if (name.equals("Ana")) {
