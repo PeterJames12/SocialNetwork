@@ -1,10 +1,12 @@
 package social_network.data;
 
+import social_network.model.Event;
 import social_network.model.Post;
 import social_network.model.User;
 import social_network.util.Status;
 import social_network.util.University;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,6 +15,8 @@ import java.util.List;
  * @author Igor Hnes on 10/7/17.
  */
 public class Database {
+
+    private static List<Event> eventList = new LinkedList<>();
 
     public static List<User> getAllUsers() {
 
@@ -50,22 +54,50 @@ public class Database {
         Post first = new Post();
         first.setTitle("News");
         first.setText("Good news!");
-        first.setPublishedTime(LocalDateTime.now());
+        first.setPublishedTime(LocalDate.now());
 
         Post second = new Post();
         second.setTitle("Sport news");
         second.setText("Win!");
-        second.setPublishedTime(LocalDateTime.now());
+        second.setPublishedTime(LocalDate.now());
 
         Post third = new Post();
         third.setTitle("Whether");
         third.setText("Rain");
-        third.setPublishedTime(LocalDateTime.now());
+        third.setPublishedTime(LocalDate.now());
 
         posts.add(first);
         posts.add(second);
         posts.add(third);
 
         return posts;
+    }
+
+    public static List<Event> getAllEvents() {
+
+        Event event = new Event();
+        event.setName("Meeting");
+        event.setDescription("Text");
+        event.setEventDate(LocalDate.now().plusWeeks(1));
+
+        Event teamBuilding = new Event();
+        teamBuilding.setName("Shosta vlada");
+        teamBuilding.setDescription("Communication");
+        teamBuilding.setEventDate(LocalDate.now().minusDays(8));
+
+        Event classOfJava = new Event();
+        classOfJava.setName("Lesson");
+        classOfJava.setDescription("Learning");
+        classOfJava.setEventDate(LocalDate.now());
+
+        eventList.add(event);
+        eventList.add(teamBuilding);
+        eventList.add(classOfJava);
+
+        return eventList;
+    }
+
+    public static void save(Event event) {
+        eventList.add(event);
     }
 }

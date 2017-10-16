@@ -8,9 +8,10 @@ import java.util.List;
 /**
  * @author Igor Hnes on 10/7/17.
  */
-public class PostDao {
+public interface PostDao {
 
-    public List<Post> getAll() {
-       return Database.getAllPosts();
-    }
+    /**
+     * @return list of {@link Post} entity.
+     */
+    List<Post> getAll();
 }

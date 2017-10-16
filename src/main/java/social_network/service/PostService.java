@@ -3,23 +3,20 @@ package social_network.service;
 import social_network.dao.PostDao;
 import social_network.model.Post;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
  * @author Igor Hnes on 10/7/17.
  */
-public class PostService {
+public interface PostService {
 
-    public List<Post> getAll() {
-        PostDao postDao = new PostDao();
-        return postDao.getAll();
-    }
+    List<Post> getAll();
 
-    public void printPosts(List<Post> posts) {
-        for (Post post : posts) {
-            System.out.println(post.getTitle());
-            System.out.println(post.getText());
-            System.out.println(post.getPublishedTime());
-        }
-    }
+    void printPosts(List<Post> posts);
+
+    boolean findByPublishedTime(LocalDate time, List<Post> posts);
+
+    boolean findByTitle(String title, List<Post> posts);
 }

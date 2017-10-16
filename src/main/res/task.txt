@@ -1,0 +1,17 @@
+Максимум прикладів з методами
+Створити масив строк та чисел двома варіантами та надрукувати
+Overloading
+this
+Constructor
+NullPointerException
+StringBuilder
+
+Перегнати int[] 1,1,1,1,1,1,1,1,1,1 в List та Set, for each писати в ручну!!!
+
+Заповнити Колекцію List сканером
+Заповнити Колекцію List random
+
+Заповнити Set random (use loop) на виході перевір set.size() та i у for
+
+Interface
+Написати реаізацію social network з інтерфейсами

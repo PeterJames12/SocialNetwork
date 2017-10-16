@@ -1,5 +1,6 @@
 package social_network.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class Post extends AbstractEntity {
 
     private String title;
     private String text;
-    private LocalDateTime publishedTime;
+    private LocalDate publishedTime;
     private List<User> usersLike;
 
     public String getTitle() {
@@ -29,15 +30,16 @@ public class Post extends AbstractEntity {
         this.text = text;
     }
 
-    public LocalDateTime getPublishedTime() {
+    public LocalDate getPublishedTime() {
         return publishedTime;
     }
 
-    public void setPublishedTime(LocalDateTime publishedTime) {
+    public void setPublishedTime(LocalDate publishedTime) {
         this.publishedTime = publishedTime;
     }
 
     public List<User> getUsersLike() {
+
         return usersLike;
     }
 

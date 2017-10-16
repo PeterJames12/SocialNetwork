@@ -8,9 +8,10 @@ import java.util.List;
 /**
  * @author Igor Hnes on 10/6/17.
  */
-public class UserDao {
+public interface UserDao {
 
-    public List<User> getAll() {
-        return Database.getAllUsers();
-    }
+    /**
+     * @return list of {@link User} entity.
+     */
+     List<User> getAll();
 }
