@@ -12,9 +12,10 @@ public class MyException extends IOException {
         System.out.println("File path incorrect");
     }
 
-
-    public void printMyException(String message) {
+    public void printMyException(String site) {
         System.out.println("File path incorrect");
+//        "https://www.facebook.com";
+//        "www.facebook.com";
         // send
     }
 }

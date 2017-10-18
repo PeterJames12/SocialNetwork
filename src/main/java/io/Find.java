@@ -19,7 +19,7 @@ public class Find {
         FileWriter writer = null;
         try {
             writer = new FileWriter(file, true);
-            writer.write("Hallo"); // ctrl + c
+            writer.save("Hallo"); // ctrl + c
             writer.flush(); // ctrl + v
         } catch (IOException e) {
             e.printStackTrace();
@@ -35,7 +35,7 @@ public class Find {
 
         // version 2
 //        try (FileWriter writer = new FileWriter(file)) {
-//            writer.write("Hello");
+//            writer.save("Hello");
 //            writer.flush();
 //        } catch (IOException e) {
 //            e.printStackTrace();
@@ -48,7 +48,7 @@ public class Find {
 //        System.out.println("Enter path to file");
 //        final String path = scanner2.nextLine();
 
-        final String path = "src/main/res/path.txt";
+        final String path = "src/main/res/path.txt"; // todo replace for windows (right click on selected file and select cope Path)
         File file = new File(path);
 //
 //        try (FileWriter writer = new FileWriter(file);
@@ -57,9 +57,9 @@ public class Find {
 //            String name = scanner.nextLine();
 //            System.out.println("Enter ur city");
 //            String city = scanner.nextLine();
-//            writer.write("Name: " + name);
-//            writer.write("\n");
-//            writer.write("City: " + city);
+//            writer.save("Name: " + name);
+//            writer.save("\n");
+//            writer.save("City: " + city);
 //            writer.flush();
 //        } catch (IOException e) {
 //            e.printStackTrace();
@@ -90,7 +90,7 @@ public class Find {
 
 
 //        try (final BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))){
-//            writer.write("Hello");
+//            writer.save("Hello");
 //            writer.flush();
 //        } catch (IOException e) {
 //            e.printStackTrace();
